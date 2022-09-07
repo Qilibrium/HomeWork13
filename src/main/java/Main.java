@@ -13,7 +13,7 @@ public class Main {
     public static void main(String[] args) throws IOException, InterruptedException {
 
         User defaultUser = createDefaultUser();
-        //add new user
+        //add user
         User createdUser = Method.createUser(URI.create(USERS_URL), defaultUser);
         System.out.println("Created user:\n" + createdUser);
         //get user to update
@@ -36,6 +36,7 @@ public class Main {
         //get user by username
         User userByUsername = Method.getUserByUsername(URI.create(USERS_URL), "Bret");
         System.out.println("User got by username:\n" + userByUsername);
+
 
         //get user posts
         int userId = 5;
